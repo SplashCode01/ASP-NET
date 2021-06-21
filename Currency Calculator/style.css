@@ -1,0 +1,127 @@
+html{
+    background-color: #100a1c;
+    color: #6cacc5;
+}
+
+body {
+    background-color: #100a1c;
+    color: #6cacc5;
+  }
+  
+  .calculator {
+    margin: auto;
+    background-color: #100a1c;
+    width: 295px;
+    max-width: 295px;
+    height: 325px;
+    text-align: center;
+    border-radius: 4px;
+    padding-right: 10px;
+  }
+  
+  .number {
+    outline: 0;
+    position: relative;
+    top: 5px;
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+    border-radius: 4px;
+    float: left;
+    font-size: 20px;
+  }
+  
+  .display {
+    border: 0;
+    font-size: large;
+    height: 50px;
+    background-color: #100a1c;
+    text-align: right;
+    color: #c97874;
+  }
+  
+  .operator {
+    outline: 0;
+    position: relative;
+    top: 5px;
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+    border-radius: 4px;
+    float: left;
+    font-size: 20px;
+  }
+  
+  .clear {
+    outline: 0;
+    position: relative;
+    top: 5px;
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+    border-radius: 4px;
+    float: left;
+    font-size: 20px;
+  }
+
+  .solve {
+    outline: 0;
+    position: relative;
+    top: 5px;
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+    border-radius: 4px;
+    float: left;
+    font-size: 20px;
+  }
+  
+  .parentheses {
+    outline: 0;
+    position: relative;
+    top: 5px;
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+    border-radius: 4px;
+    float: left;
+    font-size: 20px;
+  }
+
+.currencyDropdowns{
+    margin-top: 7px;
+}
+
+.currency{
+    border: 0;
+    color: #6cacc5;
+    background-color: rgba(42,50,113, .28);
+}
+
+.rates{
+    border: 0;
+    color: #6cacc5;
+    background-color: rgba(42,50,113, .28);
+}
+
+.label {
+    padding: 0;
+    height: 38px;
+    color: #6cacc5;
+    background-color: rgba(42,50,113, .28);
+}
+
+.textLabel {
+    border: 0;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+}
+
+.rate {
+    border: 0;
+    padding: 0;
+    width: 95px;
+    height: 38px;
+    color: #6cacc5;
+    background: rgba(42,50,113, .28);
+}
