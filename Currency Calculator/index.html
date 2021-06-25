@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="container">
         <form name="calculator">
 
             <div class="buttons container">
@@ -20,7 +21,7 @@
                     <div id="currencyLabel" class="label input-group-prepend col-3">
                         <span class="textLabel input-group-text">Exchange Rate in GEL:</span>
                     </div>
-                    <input class="rate col-1" type="text" id="rate" disabled>
+                    <input class="displayRate col-1" type="text" id="displayRate" readonly>
                 </div>
 
                 <div class="row">
@@ -54,23 +55,21 @@
                     <button type="button" id="solve" class="solve col-1" value="=" onclick="calculator.display.value = eval(calculator.display.value); enableOperators();">=</button>
                 </div>
 
-                <div class="currencyDropdowns row">
-                    <button class="currency btn btn-secondary dropdown-toggle col-2" type="button" id="selectCurrency" data-bs-toggle="dropdown" aria-expanded="false" onclick="populateCurrencies();">
+                <div class="row">
+                    <button class="currency btn btn-secondary dropdown-toggle col-2" type="button" id="selectCurrency" data-bs-toggle="dropdown" aria-expanded="false"">
                         Select Currency
                       </button>
-                      <ul id="currencies" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <ul id="currencies-list" class="currencies-list dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       </ul>
-                      <button class="rates btn btn-secondary dropdown-toggle col-2" type="button" id="selectDate" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="rate btn btn-secondary dropdown-toggle col-2" type="button" id="selectDate" data-bs-toggle="dropdown" aria-expanded="false">
                         Select Date
                       </button>
-                      <ul id="rates" class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <ul id="rates-list" class="rates-list dropdown-menu" aria-labelledby="dropdownMenuButton2">
                       </ul>
                 </div>
             </div>
 
         </form>
+        </div>
     </body>
 </html>

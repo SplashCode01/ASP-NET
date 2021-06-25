@@ -98,7 +98,7 @@ body {
     background-color: rgba(42,50,113, .28);
 }
 
-.rates{
+.rate{
     border: 0;
     color: #6cacc5;
     background-color: rgba(42,50,113, .28);
@@ -113,15 +113,6 @@ body {
 
 .textLabel {
     border: 0;
-    color: #6cacc5;
-    background: rgba(42,50,113, .28);
-}
-
-.rate {
-    border: 0;
-    padding: 0;
-    width: 95px;
-    height: 38px;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
 }

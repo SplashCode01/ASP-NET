@@ -1,1 +1,14 @@
-["EUR", "USD", "GBP"]
+[
+  {
+    "name": "US Dollar",
+    "code": "USD"
+  },
+  {
+    "name": "Euro",
+    "code": "EUR"
+  },
+  {
+    "name": "British Pound",
+    "code": "GBP"
+  }
+]
