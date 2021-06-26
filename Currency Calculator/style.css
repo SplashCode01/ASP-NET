@@ -8,111 +8,64 @@ body {
     color: #6cacc5;
   }
   
-  .calculator {
-    margin: auto;
+  .container {
     background-color: #100a1c;
-    width: 295px;
-    max-width: 295px;
-    height: 325px;
     text-align: center;
-    border-radius: 4px;
-    padding-right: 10px;
   }
   
   .number {
-    outline: 0;
-    position: relative;
-    top: 5px;
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
-    border-radius: 4px;
-    float: left;
-    font-size: 20px;
   }
   
   .display {
-    border: 0;
-    font-size: large;
-    height: 50px;
     background-color: #100a1c;
     text-align: right;
     color: #c97874;
+    height: 40px;
   }
   
   .operator {
-    outline: 0;
-    position: relative;
-    top: 5px;
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
-    border-radius: 4px;
-    float: left;
-    font-size: 20px;
   }
   
   .clear {
-    outline: 0;
-    position: relative;
-    top: 5px;
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
-    border-radius: 4px;
-    float: left;
-    font-size: 20px;
   }
 
   .solve {
-    outline: 0;
-    position: relative;
-    top: 5px;
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
-    border-radius: 4px;
-    float: left;
-    font-size: 20px;
   }
   
   .parentheses {
-    outline: 0;
-    position: relative;
-    top: 5px;
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
-    border-radius: 4px;
-    float: left;
-    font-size: 20px;
   }
 
-.currencyDropdowns{
-    margin-top: 7px;
-}
-
 .currency{
-    border: 0;
     color: #6cacc5;
     background-color: rgba(42,50,113, .28);
 }
 
 .rate{
-    border: 0;
     color: #6cacc5;
     background-color: rgba(42,50,113, .28);
 }
 
 .label {
-    padding: 0;
-    height: 38px;
     color: #6cacc5;
     background-color: rgba(42,50,113, .28);
 }
 
 .textLabel {
-    border: 0;
     color: #6cacc5;
     background: rgba(42,50,113, .28);
+}
+
+.displayRate {
+  color:#c97874;
+  text-align: right;
 }

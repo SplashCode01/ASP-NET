@@ -9,65 +9,62 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container w-25">
         <form name="calculator">
-
-            <div class="buttons container">
-                <div class="display row">
-                    <input class="display col-4" type="text" id="display" disabled>
+                <div class="display row border-0">
+                    <input class="display col border-0" type="text" id="display" disabled>
                 </div>
     
-                <div class="currencyDisplay input-group row">
-                    <div id="currencyLabel" class="label input-group-prepend col-3">
-                        <span class="textLabel input-group-text">Exchange Rate in GEL:</span>
+                <div class="currencyDisplay input-group row border-0">
+                    <div id="currencyLabel" class="label input-group-prepend col border-0">
+                        <span class="textLabel input-group-text border-0">Exchange Rate in GEL:</span>
                     </div>
-                    <input class="displayRate col-1" type="text" id="displayRate" readonly>
+                    <input class="displayRate col border-0" type="text" id="displayRate" disabled>
                 </div>
 
                 <div class="row">
-                    <button type="button" id="power" class="operator col-1" value="^" onclick="calculator.display.value += '**'; disableOperators();">^</button>
-                    <button type="button" id="open" class="parentheses col-1" value="(" onclick="calculator.display.value += '('">(</button>
-                    <button type="button" id="close" class="parentheses col-1" value=")" onclick="calculator.display.value += ')'; enableOperators();">)</button>
-                    <button type="button" id="divide" class="operator col-1" value="/" onclick="calculator.display.value += '/'; disableOperators();">/</button>
+                    <button type="button" id="power" class="operator col border-0" value="^" onclick="calculator.display.value += '**'; disableOperators();">^</button>
+                    <button type="button" id="open" class="parentheses col border-0" value="(" onclick="calculator.display.value += '('; disableOperators();">(</button>
+                    <button type="button" id="close" class="parentheses col border-0" value=")" onclick="calculator.display.value += ')'; enableOperators();">)</button>
+                    <button type="button" id="divide" class="operator col border-0" value="/" onclick="calculator.display.value += '/'; disableOperators();">/</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="number col-1" value="7" onclick="calculator.display.value += '7'; enableOperators();">7</button>
-                    <button type="button" class="number col-1" value="8" onclick="calculator.display.value += '8'; enableOperators();">8</button>
-                    <button type="button" class="number col-1" value="9" onclick="calculator.display.value += '9'; enableOperators();">9</button>
-                    <button type="button" id="multiply" class="operator col-1" value="x" onclick="calculator.display.value += '*'; disableOperators();">x</button>
+                    <button type="button" class="number col border-0" value="7" onclick="calculator.display.value += '7'; enableOperators();">7</button>
+                    <button type="button" class="number col border-0" value="8" onclick="calculator.display.value += '8'; enableOperators();">8</button>
+                    <button type="button" class="number col border-0" value="9" onclick="calculator.display.value += '9'; enableOperators();">9</button>
+                    <button type="button" id="multiply" class="operator col border-0" value="x" onclick="calculator.display.value += '*'; disableOperators();">x</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="number col-1" value="4" onclick="calculator.display.value += '4'; enableOperators();">4</button>
-                    <button type="button" class="number col-1" value="5" onclick="calculator.display.value += '5'; enableOperators();">5</button>
-                    <button type="button" class="number col-1" value="6" onclick="calculator.display.value += '6'; enableOperators();">6</button>
-                    <button type="button" id="subtract" class="operator col-1" value="-" onclick="calculator.display.value += '-'; disableOperators();">-</button>
+                    <button type="button" class="number col border-0" value="4" onclick="calculator.display.value += '4'; enableOperators();">4</button>
+                    <button type="button" class="number col border-0" value="5" onclick="calculator.display.value += '5'; enableOperators();">5</button>
+                    <button type="button" class="number col border-0" value="6" onclick="calculator.display.value += '6'; enableOperators();">6</button>
+                    <button type="button" id="subtract" class="operator col border-0" value="-" onclick="calculator.display.value += '-'; disableOperators();">-</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="number col-1" value="1" onclick="calculator.display.value += '1'; enableOperators();">1</button>
-                    <button type="button" class="number col-1" value="2" onclick="calculator.display.value += '2'; enableOperators();">2</button>
-                    <button type="button" class="number col-1" value="3" onclick="calculator.display.value += '3'; enableOperators();">3</button>
-                    <button type="button" id="add" class="operator col-1" value="+" onclick="calculator.display.value += '+'; disableOperators();">+</button>
+                    <button type="button" class="number col border-0" value="1" onclick="calculator.display.value += '1'; enableOperators();">1</button>
+                    <button type="button" class="number col border-0" value="2" onclick="calculator.display.value += '2'; enableOperators();">2</button>
+                    <button type="button" class="number col border-0" value="3" onclick="calculator.display.value += '3'; enableOperators();">3</button>
+                    <button type="button" id="add" class="operator col border-0" value="+" onclick="calculator.display.value += '+'; disableOperators();">+</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="operator col-1" value="." onclick="calculator.display.value += '.'; disableOperators();">.</button>
-                    <button type="button" class="number col-1" value="0" onclick="calculator.display.value += '0'; enableOperators();">0</button>
-                    <button type="button" class="clear col-1" id="clear" value="C" onclick="calculator.display.value = ''; enableOperators();">C</button>
-                    <button type="button" id="solve" class="solve col-1" value="=" onclick="calculator.display.value = eval(calculator.display.value); enableOperators();">=</button>
+                    <button type="button" class="operator col border-0" value="." onclick="calculator.display.value += '.'; disableOperators();">.</button>
+                    <button type="button" class="number col border-0" value="0" onclick="calculator.display.value += '0'; enableOperators();">0</button>
+                    <button type="button" class="clear col border-0" id="clear" value="C" onclick="calculator.display.value = ''; enableOperators();">C</button>
+                    <button type="button" id="solve" class="solve col border-0" value="=" onclick="calculator.display.value = eval(calculator.display.value); enableOperators();">=</button>
                 </div>
 
                 <div class="row">
-                    <button class="currency btn btn-secondary dropdown-toggle col-2" type="button" id="selectCurrency" data-bs-toggle="dropdown" aria-expanded="false"">
+                    <button class="currency btn btn-secondary dropdown-toggle col border-0" type="button" id="selectCurrency" data-bs-toggle="dropdown" aria-expanded="false"">
                         Select Currency
                       </button>
                       <ul id="currencies-list" class="currencies-list dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       </ul>
-                      <button class="rate btn btn-secondary dropdown-toggle col-2" type="button" id="selectDate" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="rate btn btn-secondary dropdown-toggle col border-0" type="button" id="selectDate" data-bs-toggle="dropdown" aria-expanded="false">
                         Select Date
                       </button>
                       <ul id="rates-list" class="rates-list dropdown-menu" aria-labelledby="dropdownMenuButton2">
                       </ul>
                 </div>
-            </div>
 
         </form>
         </div>

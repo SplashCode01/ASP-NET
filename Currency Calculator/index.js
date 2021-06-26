@@ -12,7 +12,7 @@ $(document).ready(function () {
              dataType: "json",
              success: function(data) {
                  $.each(data, function (i, option) {
-                    populateCurrencies(option.name, option.code, '.currencies-list', "currencies dropdown-item");
+                    populateCurrencies(option.name, option.code, '.currencies-list', "currencies dropdown-item", "chooseCurrency(this.id)");
                  })
              },
              error: function(){
@@ -22,24 +22,47 @@ $(document).ready(function () {
      });
     
  
-     $('.rate').click(function () {
-         $('.rates-list').empty();
-         $.ajax({
-             type: "GET",
-             url: "Rates.json",
-             dataType: "json",
-             success: function (data) {
-                 array = data.GEL;
-                 $.each(data.GEL, function (i, option) {
-                    populateCurrencies(option.date, option.date, '.rates-list', "rates dropdown-item");
-                 })
-             },
-             error: function () {
-                 alert("json not found");
-             }
-         });
-     });
+    $('.rate').click(function () {
+        $('.rates-list').empty();
+        $.ajax({
+            type: "GET",
+            url: "Rates.json",
+            dataType: "json",
+            success: function (data) {
+                array = data.GEL;
+                $.each(data.GEL, function (i, option) {
+                    populateCurrencies(option.date, option.date, '.rates-list', "rates dropdown-item", "chooseDate(this.id)");
+                })
+            },
+            error: function () {
+                alert("json not found");
+            }
+        });
+    });
 });
+
+function chooseCurrency(clicked_id){
+    selectedCurrency = clicked_id;
+    document.getElementById('selectCurrency').innerHTML = clicked_id;
+    console.log(selectedCurrency);
+}
+
+function chooseDate(clicked_id){
+    selectedDate = clicked_id;
+    document.getElementById('selectDate').innerHTML = clicked_id;
+    console.log(selectedDate);
+    console.log(array);
+    let arrayDate = array.find(a => a.date === selectedDate);
+    if (selectedCurrency === "EUR") {
+        rate = arrayDate.rates.EUR;                  
+    } else if (selectedCurrency === "USD") {
+        rate = arrayDate.rates.USD;
+    } else if (selectedCurrency === "GBP") {
+        rate = arrayDate.rates.GBP;
+    }
+    console.log(rate);
+    document.getElementById('displayRate').value = rate;
+}
 
 function disableOperators(){
     var elems = document.getElementsByClassName("operator");
@@ -55,31 +78,15 @@ function enableOperators(){
     }
 }
 
-function populateCurrencies(option, id, path, classname){
-    var item = document.createElement("a");
+function populateCurrencies(option, id, path, classname, funcName){
+    var list = document.createElement("li");
+    var item = document.createElement("button");
+    list.appendChild(item);
     item.setAttribute("class", classname);
+    item.setAttribute("onclick", funcName);
     item.href = "#";
     item.setAttribute("id", id);
     var node = document.createTextNode(option);
     item.appendChild(node);
-    $(path)[0].appendChild(item);
+    $(path)[0].appendChild(list);
 }
-
-
-$('.currencies').click(function(){
-    selectedCurrency = $(this).attr('id');
-})
-
-$('rates').click(function(){
-    selectedDate = $(this).attr('id');
-    let obj = array.find(o => o.date === selectedDate);
-    if (selectedCurrency === "EUR") {
-        rate = obj.rates.EUR;                
-    } else if (selectedCurrency === "USD") {
-        rate = obj.rates.USD;
-    } else if (selectedCurrency === "GBP") {
-        rate = obj.rates.GBP;
-    }
-    
-    $("#displayRate").val(rate);
- })
