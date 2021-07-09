@@ -1,0 +1,6 @@
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\bin\Debug\SchoolDB.Domain.dll
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\bin\Debug\SchoolDB.Domain.pdb
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\obj\Debug\SchoolDB.Domain.csproj.AssemblyReference.cache
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\obj\Debug\SchoolDB.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\obj\Debug\SchoolDB.Domain.dll
+C:\Users\Johny\Desktop\ASP-NET-main\SchoolDB\SchoolDB.Domain\obj\Debug\SchoolDB.Domain.pdb
